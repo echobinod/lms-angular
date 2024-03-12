@@ -1,0 +1,32 @@
+<div class="type-container">
+  <div class="type-header">
+    <h1 class="mat-display-1">Manage leave types</h1>
+    <button mat-raised-button color="primary" (click)="onAddClick()">Add New</button>
+  </div>
+  <div *ngIf="(leaveTypes$ | async) as leaveTypes;">
+    <mat-card *ngFor="let type of leaveTypes" class="type-request-card">
+      <div class="type-data">
+        <div>
+          <mat-card-header>
+            <mat-card-title>{{type.label}}</mat-card-title>
+            <mat-card-subtitle>
+              <strong>Total Days</strong>: <small><u>{{ type.totalDays }}</u></small>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content></mat-card-content>
+        </div>
+        <mat-card-actions>
+
+          <button mat-mini-fab color="secondary" aria-label="Example icon button with a delete icon" matTooltip="Edit"
+            (click)="onEditClick(type)">
+            <mat-icon>edit</mat-icon>
+          </button>&nbsp;
+          <button mat-mini-fab color="warn" aria-label="Example icon button with a delete icon" matTooltip="Delete"
+            (click)="onDeleteClick(type.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+</div>

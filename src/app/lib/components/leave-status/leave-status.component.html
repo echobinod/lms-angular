@@ -1,0 +1,30 @@
+<div class="leave-tracking-container">
+  <div class="mat-display-1">
+    <h1>My Leave Applications:</h1>
+    <button mat-raised-button color="primary" [routerLink]="'/apply-leave'">
+      <mat-icon>add</mat-icon>
+      Apply leave
+    </button>
+  </div>
+
+  <div class="leave-request-list" *ngIf="(leaves$ | async) as leaves; else loading">
+    <mat-card *ngFor="let leave of leaves; let i = index;" class="leave-request-card"
+      [class.approved]="leave.status === 'Approved'" [class.pending]="leave.status === 'Pending'"
+      [class.rejected]="leave.status === 'Rejected'">
+      <mat-card-header>
+        <div mat-card-avatar class="status-avatar" [matTooltip]="leave.status">{{ leave.status.charAt(0) }}</div>
+        <mat-card-title>{{ leave.leaveType }}</mat-card-title>
+        <mat-card-subtitle>
+          <span>Start Date: {{ leave.startDate | date }}</span><br />
+          <span>End Date: {{ leave.endDate | date }}</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ leave.reason }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <ng-template #loading>
+    <p class="no-requests-message">Loading...</p>
+  </ng-template>
+</div>

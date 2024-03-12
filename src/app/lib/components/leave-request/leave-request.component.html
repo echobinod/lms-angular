@@ -1,0 +1,29 @@
+<div class="leave-tracking-container">
+  <h1 class="mat-display-1">Leave Requests</h1>
+  <div *ngIf="leaveRequests.length > 0; else noRequests">
+    <mat-card *ngFor="let request of leaveRequests" class="leave-request-card"
+      [class.approved]="request.status === 'Approved'" [class.pending]="request.status === 'Pending'"
+      [class.rejected]="request.status === 'Rejected'">
+      <div class="leave-data">
+        <div>
+          <mat-card-header>
+            <mat-card-title>John Doe</mat-card-title>
+            <mat-card-subtitle>
+              <strong>Start Date</strong>: <small><u>{{ request.startDate | date }}</u></small>&nbsp;
+              <strong>End Date</strong>: <small><u>{{ request.endDate | date }}</u></small>&nbsp;
+              <strong>Status</strong>: <small><u>{{request.status}}</u></small><br />
+              <strong>Reason</strong>: <small>{{request.reason}}</small>
+            </mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="onAccept(request.id)">Accept</button>&nbsp;
+          <button mat-raised-button color="warn" (click)="onReject(request.id)">Reject</button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  <ng-template #noRequests>
+    <p class="no-requests-message">No leave requests found.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,38 @@
+.landing-page-container {
+  text-align: center;
+
+  .landing-page-content {
+    margin-top: 50px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .login-container {
+    max-width: 500px;
+    margin: 50px auto;
+
+    mat-card-title {
+      margin-bottom: 20px;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      mat-form-field {
+        width: 100%;
+      }
+
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<form [formGroup]="leaveBalanceForm" (ngSubmit)="updateLeaveBalance()">
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Leave Balance</mat-label>
+      <input type="number" min="0" matInput placeholder="Leave Balance" formControlName="leaveBalance">
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close (click)="onNoClick()">Cancel</button>
+      <button type="submit" mat-button mat-dialog-close cdkFocusInitial [disabled]="!leaveBalanceForm.valid">OK</button>
+    </div>
+  </div>
+</form>

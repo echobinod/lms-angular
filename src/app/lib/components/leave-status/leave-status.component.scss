@@ -1,0 +1,67 @@
+.leave-tracking-container {
+  // width: 100%;
+  margin: 20px auto;
+  padding: 1rem;
+
+  .mat-display-1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+  }
+
+  .leave-request-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .leave-request-card {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    mat-card-header {
+      align-items: center;
+      padding: 12px;
+
+      .status-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+        line-height: 36px;
+        color: #fff;
+        margin-right: 12px;
+      }
+    }
+
+    mat-card-content {
+      padding: 12px;
+      margin-left: 4rem;
+    }
+
+    &.approved mat-card-header .status-avatar {
+      background-color: #4caf50;
+    }
+
+    &.pending mat-card-header .status-avatar {
+      background-color: #ffc107;
+    }
+
+    &.rejected mat-card-header .status-avatar {
+      background-color: #f44336;
+    }
+  }
+
+  .no-requests-message {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

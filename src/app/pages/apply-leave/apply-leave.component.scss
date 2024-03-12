@@ -1,0 +1,14 @@
+.leave-request-container {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.leave-request-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.leave-request-form .mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}

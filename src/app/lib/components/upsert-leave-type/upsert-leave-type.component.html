@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<form [formGroup]="leaveTypeForm" (ngSubmit)="upsertLeaveType()">
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Leave Type</mat-label>
+      <input matInput placeholder="Enter leave type" formControlName="leaveType">
+    </mat-form-field><br />
+    <mat-form-field appearance="outline">
+      <mat-label>Total Days</mat-label>
+      <input type="number" min="0" matInput placeholder="Total Days" formControlName="totalDays">
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close (click)="onNoClick()">Cancel</button>
+      <button type="submit" mat-button mat-dialog-close cdkFocusInitial [disabled]="!leaveTypeForm.valid">OK</button>
+    </div>
+  </div>
+</form>

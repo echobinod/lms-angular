@@ -1,0 +1,36 @@
+<div class="landing-page-container">
+  <div class="landing-page-content">
+    <h1>Leave Management System!</h1>
+    <p>Development of Leave
+      Management System with Angular.</p>
+  </div>
+
+  <div class="login-container">
+    <mat-card>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Enter your email" type="email" name="email">
+            <mat-error *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+              Email is required.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" placeholder="Enter your password" type="password"
+              name="password">
+            <mat-error *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+              Password is required.
+            </mat-error>
+          </mat-form-field>
+          <mat-checkbox class="example-margin" color="primary" formControlName="isEmployee"
+            (change)="onCheckboxChange()">Check if you are
+            Employee</mat-checkbox>
+          <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
