@@ -1,6 +1,18 @@
-# LmsStandalone
+# LMS-Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+
+## Run mock json-server
+
+- Mock data are availabe in db.json file.
+
+- Run: `npx json-server db.json`, it will run mock api in :3000 port
+
+## Login
+
+- In login page if checkbox is selected, `employee` role will be activated
+- If not checked, admin (or: hr, manager) role will be activated
+- For now token is saved in localStorage
 
 ## Development server
 

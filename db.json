@@ -94,87 +94,6 @@
       "roleId": "Employee",
       "departmentId": 1,
       "leaveBalance": 10
-    },
-    {
-      "id": "16f6"
-    },
-    {
-      "id": "86ab"
-    },
-    {
-      "id": "f7e2"
-    },
-    {
-      "id": "12b8"
-    },
-    {
-      "id": "473d"
-    },
-    {
-      "id": "d304"
-    },
-    {
-      "id": "77ba"
-    },
-    {
-      "id": "48c1"
-    },
-    {
-      "id": "66bd"
-    },
-    {
-      "id": "3a8d"
-    },
-    {
-      "id": "f878"
-    },
-    {
-      "id": "53e8"
-    },
-    {
-      "id": "06ed"
-    },
-    {
-      "id": "9323"
-    },
-    {
-      "id": "4c46"
-    },
-    {
-      "id": "5678"
-    },
-    {
-      "id": "42ba"
-    },
-    {
-      "id": "462c"
-    },
-    {
-      "id": "839c"
-    },
-    {
-      "id": "9165"
-    },
-    {
-      "id": "6737"
-    },
-    {
-      "id": "563d"
-    },
-    {
-      "id": "d4a7"
-    },
-    {
-      "id": "c856"
-    },
-    {
-      "id": "2123"
-    },
-    {
-      "id": "c221"
-    },
-    {
-      "id": "0b07"
     }
   ],
   "leaveType": [
@@ -187,18 +106,6 @@
       "id": "3",
       "label": "Annual Leave",
       "totalDays": 5
-    },
-    {
-      "id": "0390",
-      "label": "Random",
-      "value": "Random",
-      "totalDays": 5
-    },
-    {
-      "label": "New ho",
-      "value": "New ho",
-      "totalDays": 2,
-      "id": "bb2e"
     }
   ],
   "userLeaves": [
@@ -210,7 +117,7 @@
       "startDate": "2024-03-10",
       "endDate": "2024-03-10",
       "createdDate": "2024-03-10",
-      "leaveType": 1,
+      "leaveType": "Annual Leave",
       "approvedBy": 2
     },
     {
@@ -221,7 +128,7 @@
       "startDate": "2024-03-10",
       "endDate": "2024-03-10",
       "createdDate": "2024-03-10",
-      "leaveType": 1,
+      "leaveType": "Casual Leave",
       "approvedBy": 2
     },
     {
@@ -232,7 +139,7 @@
       "startDate": "2024-03-10",
       "endDate": "2024-03-10",
       "createdDate": "2024-03-10",
-      "leaveType": 1,
+      "leaveType": "Sick Leave",
       "approvedBy": 2
     },
     {
@@ -303,7 +210,7 @@
       "startDate": "2024-03-11T18:15:00.000Z",
       "endDate": "2024-03-20T18:15:00.000Z",
       "leaveType": "Annual Leave",
-      "reason": "THis is isfkaljsflkj\n",
+      "reason": "THis is isfkaljsflkj",
       "status": "Pending",
       "createdDate": "2024-03-10T18:12:17.777Z"
     },
